@@ -23,6 +23,16 @@ overlays.forEach(overlay => {
     });
 });
 
+document.addEventListener("keydown", function (e) {
+  if (e.key === "F12" || (e.ctrlKey && e.shiftKey && e.key === "I")) {
+    e.preventDefault();
+  }
+});
+
+document.addEventListener("contextmenu", function (e) {
+  e.preventDefault();
+});
+
 // const card = document.getElementById('card');
 // const adamText = card.querySelector('.adam');
 
