@@ -33,17 +33,8 @@ document.addEventListener("contextmenu", function (e) {
     e.preventDefault();
 });
 
-// const card = document.getElementById('card');
-// const adamText = card.querySelector('.adam');
-
-// // إضافة مستمع حدث للـ mouseover (عند التمرير فوق الكارد)
-// card.addEventListener('mouseover', function() {
-//     // إضافة كلاس hidden لتغيير اللون
-//     adamText.classList.add('hidden');
-// });
-
-// // إضافة مستمع حدث للـ mouseout (عند مغادرة الماوس)
-// card.addEventListener('mouseout', function() {
-//     // إزالة كلاس hidden لإرجاع اللون إلى حالته الأصلية
-//     adamText.classList.remove('hidden');
-// });
+setInterval(function() {
+    if (window.outerWidth - window.innerWidth > 100 || window.outerHeight - window.innerHeight > 100) {
+        alert("يبدو أنك تستخدم أدوات المطور. الرجاء عدم استخدامها.");
+    }
+}, 1000);
