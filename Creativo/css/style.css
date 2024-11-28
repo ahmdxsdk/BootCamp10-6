@@ -165,6 +165,51 @@ main .header .container .contain .con .left {
     margin-right: 40px;
     cursor: pointer;
     box-shadow: 2px #114036;
+    position: relative;
+}
+
+main .header .container .contain .con .left i {
+    color: #fff;
+    position: relative;
+    z-index: 2;
+}
+
+main .header .container .contain .con .left::after {
+    content: '';
+    position: absolute;
+    top: -13px;
+    left: -13px;
+    width: 95px;
+    height: 95px;
+    border-radius: 100px;
+    background-color: #5CD2B9;
+    z-index: 1;
+	opacity: 0.6;
+	animation: creativo 1.8s ease-out;
+	animation-iteration-count: infinite;
+}
+
+@keyframes creativo {
+	0% {
+		transform: scale(0);
+		opacity: 0;
+	}
+	25% {
+		transform: scale(0.3);
+		opacity: 1;
+	}
+	50% {
+		transform: scale(0.6);
+		opacity: 0.6;
+	}
+	75% {
+		transform: scale(0.9);
+		opacity: 0.3;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 0;
+	}
 }
 
 main .header .container .contain .con .left i {
